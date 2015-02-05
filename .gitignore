@@ -1,5 +1,7 @@
 # User specific & automatically generated files #
 #################################################
+app/tmp/
+lib/Cake/Console/Templates/skel/tmp/
 /build
 /dist
 /tags
