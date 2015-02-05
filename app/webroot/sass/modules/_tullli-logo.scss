@@ -1,0 +1,22 @@
+$module: 'tullli-logo';
+.#{$module} {
+	h1 {
+		margin: 0;
+		font-family: $font-family-logo;
+	}
+	a {
+		display: block;
+		font-size: 24px;
+		&:hover {
+			text-decoration: none
+		}
+		position: relative;
+		color: $brand-inverse;
+		margin: 3px 15px 3px 10px;
+	}
+}
+.#{$module}-large {
+	a {
+		@include adjust-font-size-to(28px);
+	}
+}

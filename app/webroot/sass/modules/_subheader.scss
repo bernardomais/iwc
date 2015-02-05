@@ -1,0 +1,17 @@
+$module: 'subheader';
+
+.#{$module}-session {
+	padding: {
+		bottom: 20px;
+	}
+}
+.#{$module}-title {
+	h3 {
+		margin: {
+			top: 0
+		}
+	}
+}
+.#{$module}-description {
+	@include adjust-font-size-to(20px);
+}

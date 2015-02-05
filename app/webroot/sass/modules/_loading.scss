@@ -1,0 +1,10 @@
+$module: 'loading';
+
+.#{$module} {
+	position: relative;
+	top: 0;
+	width: 100px;
+	z-index: 9999;
+	margin: 0 auto;
+	@include box-shadow(rgba(black, .1) 0 2px 4px);
+}

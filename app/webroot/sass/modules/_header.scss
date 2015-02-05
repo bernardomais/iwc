@@ -1,0 +1,20 @@
+$module: 'header';
+
+.#{$module}-session {
+	padding: 20px 0;
+}
+.#{$module}-title {
+	h2 {
+		margin: {
+			top: 0
+		}
+	}	
+}
+.#{$module}-separator {
+	margin: {
+		bottom: 48px
+	}
+}
+.#{$module}-description {
+	@include adjust-font-size-to(20px);
+}

@@ -1,0 +1,26 @@
+$module: 'tullli-bar';
+
+.#{$module} {
+	background: {
+		color: white
+	}
+	border-bottom: {
+		width: 1px;
+		style: solid;
+		color: white
+	}
+	padding: 10px 0;
+    //@include box-shadow(rgba(black, .1) 0 2px 4px);
+    &.visible-xs {
+    	top: 52px;
+    	z-index: 990;
+    	border-top: {
+			width: 1px;
+			style: solid;
+			color: #c4c4c4
+		}
+    }
+    .dropdown-menu {
+    	z-index: 99999;
+    }
+}

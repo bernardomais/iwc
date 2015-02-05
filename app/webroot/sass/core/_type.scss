@@ -1,0 +1,65 @@
+//
+// Typography
+// --------------------------------------------------
+
+@include font-face('Open sans bold', 
+	font-files(
+	'opensans-bold-webfont.woff', woff,
+	'opensans-bold-webfont.ttf', ttf,
+	'opensans-bold-webfont.svg', svg,
+	'opensans-bold-webfont.eot')
+);
+@include font-face('Open sans', 
+	font-files(
+	'opensans-regular-webfont.woff', woff,
+	'opensans-regular-webfont.ttf', ttf,
+	'opensans-regular-webfont.svg', svg,
+	'opensans-regular-webfont.eot')
+);
+@include font-face('Open sans semibold', 
+	font-files(
+	'opensans-semibold-webfont.woff', woff,
+	'opensans-semibold-webfont.ttf', ttf,
+	'opensans-semibold-webfont.svg', svg,
+	'opensans-semibold-webfont.eot')
+);
+@include font-face('Lobster', 
+	font-files(
+	'lobster-webfont.woff', woff,
+	'lobster-webfont.ttf', ttf,
+	'lobster-webfont.svg', svg,
+	'lobster-webfont.eot')
+);
+@include font-face('Roboto', 
+	font-files(
+	'roboto-regular-webfont.woff', woff,
+	'roboto-regular-webfont.ttf', ttf,
+	'roboto-regular-webfont.svg', svg,
+	'roboto-regular-webfont.eot')
+);
+@include font-face('Roboto Light', 
+	font-files(
+	'roboto-light-webfont.woff', woff,
+	'roboto-light-webfont.ttf', ttf,
+	'roboto-light-webfont.svg', svg,
+	'roboto-light-webfont.eot')
+);
+@include font-face('Carme', 
+	font-files(
+	'carme-regular-webfont.woff', woff,
+	'carme-regular-webfont.ttf', ttf,
+	'carme-regular-webfont.svg', svg,
+	'carme-regular-webfont.eot')
+);
+
+//Headings
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headings-font-family;
+	margin: {
+		top: 20px;
+		bottom: 20px
+	}
+}
+h4 {
+	@include adjust-font-size-to(18px);
+}

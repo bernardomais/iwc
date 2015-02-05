@@ -1,0 +1,40 @@
+label {
+    display: block;
+}
+
+select {
+    width: 100%;
+}
+
+.number {
+    margin: 3px;
+}
+.dt_panel span {
+    margin-right: 2px;
+}
+
+.expression {
+    border: 1px dashed #ccc;
+    min-height: 200px;
+    max-width: 100%;
+    overflow: auto;
+    padding: 5px;
+	margin: 10px 0;
+}
+.dt_dynamic{
+    cursor: move;
+}
+
+.dt_dynamic .bt_close {
+    cursor: pointer;
+}
+.dt_dynamic .name {margin-right: 10px;}
+
+.dt_panel {margin: 0;}
+    
+.dt_dynamic {
+    margin: 3px;
+    padding: 5px 10px;
+    font-size: 12px;
+    display: inline-block;
+}

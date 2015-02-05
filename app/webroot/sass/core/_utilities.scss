@@ -1,0 +1,113 @@
+// Utilities
+//--------------------------
+
+.block {
+	display: block
+}
+.block-margin {
+	padding: {
+		top: 10px;
+		bottom: 10px
+	}
+}
+.separator-bottom {
+	margin: {
+		bottom: 15px;
+	}
+}
+
+
+// Hide Accessibility
+//--------------------------
+
+.wcag-hidden {
+	width: 0; 
+	height: 0; 
+	position: absolute; 
+	line-height: 0; 
+	opacity: 0; 
+	filter: alpha(opacity=0); 
+	font-size: 0
+}
+
+
+
+// Center div vertical
+//--------------------------
+
+.center {
+	display: table;
+	width: 100%;
+	min-height: 100px;
+}
+
+.center-item {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+// Colors
+// ------------------------
+
+.color-pop {
+	color: $brand-pop !important;
+}
+
+.bg-pop {
+	background: $brand-pop !important;
+	color: $body-white;
+}
+
+.color-warning {
+	color: $brand-warning !important;
+
+}
+
+.bg-warning {
+	background: $brand-warning !important;
+	color: $body-white;
+}
+
+.color-danger {
+	color: $brand-danger !important;
+}
+
+.bg-danger {
+	background: $brand-danger !important;
+	color: $body-white;
+}
+
+.color-primary {
+	color: $brand-primary !important;
+}
+
+.bg-primary {
+	background: $brand-primary !important;
+	color: $body-white;
+}
+.color-info {
+	color: $brand-info !important;
+}
+
+.bg-info {
+	background: $brand-info !important;
+	color: $body-white;
+}
+
+.color-success {
+	color: $brand-success !important;
+}
+
+.bg-success {
+	background: $brand-success !important;
+	color: $body-white;
+}
+.color-inverse {
+	color: $brand-inverse !important;
+
+}
+.bg-inverse {
+	background: #404040 !important;
+	color: $body-white;
+}

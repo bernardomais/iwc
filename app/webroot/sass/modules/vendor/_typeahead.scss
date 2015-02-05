@@ -1,0 +1,22 @@
+.twitter-typeahead {
+	width: 100%;
+	.typeahead-search {
+		display: block;
+		padding: 5px 20px !important;
+		border-left: 2px solid transparent;
+		&:hover {
+			border-left-color: $brand-primary
+		}
+	}
+	.dropdown,
+	.dropdown-menu {
+		width: 100%
+	}
+	.typeahead-name,
+	.typeahead-tips {
+		display: block
+	}
+	.typeahead-tips {
+		color: $gray-light
+	}
+}
