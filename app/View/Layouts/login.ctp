@@ -20,7 +20,10 @@
         </script>
     </head>
     <body>
-        <?php echo $this->Session->flash(); ?>
+        <?php 
+            echo $this->Session->flash(); 
+            echo $this->Session->flash('auth');
+        ?>
         <div class="page">
             <div class="body">
                 <main>

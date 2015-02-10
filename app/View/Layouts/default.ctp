@@ -1,63 +1,88 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
-?>
 <!DOCTYPE html>
+<?php $layoutAttr = Configure::read('Layout.default'); ?>
 <html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $this->fetch('title'); ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
-
-		echo $this->Html->css('cake.generic');
-
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
-
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
-</body>
+    <head>
+        <?php echo $this->Html->charset(); ?>
+        <title>IWC Engineering</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta name="author" content="ScienceIt">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="canonical" href="http://scienceit.com.br" />
+        <script>
+            var baseUrl = '<?php echo $this->Html->url('/', true); ?>';
+        </script>
+        <style>
+            .datepicker{z-index:1151 !important;}
+            .ui-selectmenu-menu.ui-front.ui-selectmenu-open{z-index:1152 !important;}
+            .popover{z-index:1153 !important;}
+            .editable-pre-wrapped {
+                white-space: inherit !important;
+            }
+        </style>
+        <style type="text/css">
+            #evaluation-scheme-graphic-representation {
+                width: 100%;
+                height: 600px;
+            }
+        </style>
+        <?php
+        echo $this->Html->css('/css/bootstrap.css');
+        echo $this->Html->css('/css/todc-bootstrap.css');
+        echo $this->Html->css('/css/todc-bootstrap-extras.css');
+        echo $this->Html->css('/css/jquery-ui.css');
+        echo $this->Html->css('/css/dynamiTags.css');
+        echo $this->Html->css('/css/app.css');
+        echo $this->Html->css('/css/vis.css');
+        echo $this->Html->script('/js/vendor/modernizr.js');
+        echo $this->fetch('meta');
+        echo $this->fetch('css');
+        echo $this->fetch('script');
+        ?>
+    </head>
+    <body <?php echo!empty($layoutAttr['body']['class']) ? sprintf('class="%s"', $layoutAttr['body']['class']) : false; ?>>
+        <?php echo $this->element('verify_connection'); ?>
+        <?php echo $this->Session->flash(); ?>
+        <?php // echo $this->element('side'); ?>
+        <div class="page">
+            <header role="banner">
+                <?php echo $this->element('top_bar'); ?>
+            </header>
+            <main>
+                <?php echo $this->fetch('content'); ?>
+            </main>
+            <?php //echo $this->element('footer'); ?>
+        </div>
+        <?php
+        echo $this->Html->script(array(
+            '/js/vendor/jquery.js',
+            '/js/vendor/jquery-ui.js',
+            'https://www.google.com/jsapi',
+            '/js/bootstrap.js',
+            '/js/vendor/raphael.js',
+            '/js/vendor/livicons.js',
+            '/js/vendor/icons-support.js',
+            '/js/vendor/icons.js',
+            '/js/vendor/notification.js',
+            '/js/vendor/datepicker.js',
+            '/js/vendor/typeahead.js',
+            '/js/vendor/handlebars.js',
+            //'/js/vendor/bootstrap-typeahead.js',
+            '/js/vendor/tagsinput.js',
+            '/js/vendor/select2.js',
+            '/js/vendor/validation.js',
+            '/js/vendor/editable.js',
+            '/js/vendor/jquery.dynamiTags.js',
+            '/js/vendor/datatable.js',
+            '/js/vendor/datatable-responsive.js',
+            '/js/vendor/html5Loader.js',
+            '/js/vendor/mask.js',
+            '/js/vendor/moment.js',
+            '/js/vendor/fullcalendar.js',
+            '/js/vendor/fullcalendar-br.js',
+            '/js/vendor/vis.js',
+            '/js/ckeditor/ckeditor.js',
+            '/js/app.js',
+        ));
+        ?>
+    </body>
 </html>

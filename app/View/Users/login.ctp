@@ -1,8 +1,8 @@
 <section>
     <header class="tullli-logo tullli-logo-large text-center">
-        <h1>
-            <?php echo $this->Html->link('IWC Engineering', array('controller' => 'pages', 'action' => 'home'), array('title' => 'Voltar para página principal', 'class' => 'hidden-xs hidden-sm')); ?>
-        </h1>
+        <h3>
+            <?php echo $this->Html->link('IWC Engineering', array('controller' => 'pages', 'action' => 'display', 'home'), array('title' => 'Voltar para página principal', 'class' => 'hidden-xs hidden-sm')); ?>
+        </h3>
     </header>
     <div class="container">
         <div class="row">
