@@ -1,4 +1,3 @@
 IWC Engineering
 
-Integrated business information system
-Electronic invoice
+Integrated business information system & Electronic invoice
